@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:jee="http://www.springframework.org/schema/jee"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/jee 
+    http://www.springframework.org/schema/jee/spring-jee-2.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+  <!-- Tietokantakäsittelyluokat -->
+  <bean id="tilausDao"
+    class="fi.harjoitustyo.verkkokauppa.tietotaso.toteutus.TilausDaoToteutus">
+  </bean>
+
+  <bean id="tuoteDao"
+    class="fi.harjoitustyo.verkkokauppa.tietotaso.toteutus.TuoteDaoToteutus">
+  </bean>
+
+  <!-- Palveluluokat -->
+  <bean id="verkkokauppaPalvelu"
+    class="fi.harjoitustyo.verkkokauppa.palvelut.toteutus.VerkkokauppapalveluToteutus">
+    <property name="tuoteDao">
+      <ref bean="tuoteDao" />
+    </property>
+    <property name="tilausDao">
+      <ref bean="tilausDao" />
+    </property>
+  </bean>
+
+  <!-- Tietokantayhteyden tiedot -->
+  <bean id="tietolahde"
+    class="org.apache.commons.dbcp.BasicDataSource">
+    <property name="driverClassName"
+      value="org.hsqldb.jdbcDriver" />
+    <property name="url" value="jdbc:hsqldb:mem:verkkokauppa" />
+    <property name="username" value="sa" />
+    <property name="password" value="" />
+  </bean>
+
+  <!-- JPA-määrittelyt -->
+
+  <!-- Luodaan tehdas entiteettihallinnoijien luomista varten -->
+  <bean id="entiteettihallinnoijatehdas"
+    class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="tietolahde" />
+    <property name="jpaVendorAdapter">
+      <bean
+        class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+    </property>
+  </bean>
+
+  <!-- Ottaa huomioon mm. @PersistenceContext-annotaatiot -->
+  <context:annotation-config />
+
+  <!-- Transaktionhallinta -->
+  <bean id="transactionManager"
+    class="org.springframework.orm.jpa.JpaTransactionManager">
+    <property name="entityManagerFactory"
+      ref="entiteettihallinnoijatehdas" />
+  </bean>
+
+  <!-- Huomioi sovelluksessa määritellyt 
+    @Transactional annotaatiot -->
+  <tx:annotation-driven />
+
+</beans>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+<head>
+<title>Verkkokauppa - Rekister&ouml;ityminen</title>
+</head>
+<body>
+<wicket:extend>
+	<h1>Rekister&ouml;idy j&auml;rjestelm&auml;n k&auml;ytt&auml;j&auml;ksi</h1>
+	<div class="descr">Ole hyv&auml; ja t&auml;yt&auml; henkil&ouml;tietosi oheiseen
+	lomakkeeseen.</div>
+
+  <p>
+      <span wicket:id="palaute">Mahdolliset palautteet t&auml;h&auml;n.</span>
+  </p>	
+	<p>
+  	<form wicket:id="lomake">
+  	 <fieldset>
+  	   <legend>Perustiedot</legend>
+  	   <p>
+  	     <label for="kayttajatunnus">Kayttaj&auml;tunnus</label> 
+  	     <input type="text" id="kayttajatunnus" wicket:id="kayttajatunnus"/>
+  	    </p>
+       <p>
+         <label for="salasana">Salasana</label> 
+         <input type="password" id="salasana" wicket:id="salasana"/>
+        </p>
+       <p>
+         <label for="etunimi">Etunimi</label> 
+         <input type="text" id="etunimi" wicket:id="etunimi"/>
+        </p>
+       <p>
+         <label for=""sukunimi"">Sukunimi</label> 
+         <input type="text" id=""sukunimi"" wicket:id="sukunimi"/>
+        </p>
+     </fieldset>
+    
+     
+     
+     <fieldset>
+       <legend>Osoite</legend>
+       <p>
+         <label for="katu">Katu</label> 
+         <input type="text" id="katu" wicket:id="katu"/>
+        </p>
+       <p>
+         <label for="postinumero">Postinumero</label> 
+         <input type="text" id="postinumero" wicket:id="postinumero"/>
+        </p>
+       <p>
+         <label for="paikkakunta">Paikkakunta</label> 
+         <input type="text" id="paikkakunta" wicket:id="paikkakunta"/>
+        </p>
+        
+        <p>
+         <label for="postilokero">Postilokero</label> 
+         <input type="text" id="postilokero" wicket:id="postilokero"/>
+        </p>
+            
+     </fieldset>
+     
+     <p class="nappi">
+      <input type="submit" value="Rekister&ouml;idy" />
+     </p>
+  	 </form>
+
+	</p>
+</wicket:extend>
+</body>
+</html>
+

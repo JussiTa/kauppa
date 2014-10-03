@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>kauppa</artifactId>
+    <groupId>fi.kauppa</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+     <relativePath>../kauppa</relativePath>
+  </parent>
+  <groupId>fi.kauppa</groupId>
+  <artifactId>kauppa-web</artifactId>
+  <packaging>jar</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>kauppa-web</name>
+  <url>http://maven.apache.org</url>
+  
+  <!-- Tässä aliprojektissa täytyy lisätä erityinen Wicketiin liittyvä
+       kirjastokokoelma käyttöön -->
+  <repositories>
+    <repository>
+      <id>wicket-snapshotit</id>
+      <url>http://wicketstuff.org/maven/repository</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
+  <!-- Erinäisiin riippuvuuksiin liittyvät versionumerot -->
+  <properties>
+    <wicket.version>1.3.3</wicket.version>
+    <wicket-security.version>1.3.0</wicket-security.version>
+    <jetty.version>6.1.4</jetty.version>
+  </properties>
+
+  <dependencies>
+    <!-- Tämä projekti tarvitsee toimiakseen 
+      hotellisovelluksen palvelut -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>kauppa-palvelu</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- Tietokantaa ja JPA-määrityksiä varten 
+      tarvittavat riippuvuudet -->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>concurrent</groupId>
+      <artifactId>concurrent</artifactId>
+      <version>1.3.4</version>
+    </dependency>
+    <dependency>
+      <groupId>hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>1.8.0.7</version>
+    </dependency>
+    <!-- Wicket-riippvuudet -->
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket</artifactId>
+      <version>${wicket.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket-extensions</artifactId>
+      <version>${wicket.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket-spring-annot</artifactId>
+      <version>${wicket.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+    <!-- Turvallisuusriippuvuudet -->
+    <dependency>
+      <groupId>org.apache.wicket.wicket-security</groupId>
+      <artifactId>swarm</artifactId>
+      <version>${wicket-security.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.wicket.wicket-security</groupId>
+      <artifactId>wasp</artifactId>
+      <version>${wicket-security.version}</version>
+    </dependency>
+    <!-- Yleiset muut riippuvuudet -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.9</version>
+    </dependency>
+    <!-- Tietokannan alustamista varten -->
+    <dependency>
+      <groupId>org.dbunit</groupId>
+      <artifactId>dbunit</artifactId>
+      <version>2.2.1</version>
+    </dependency>
+    <!-- Servlet-spesifikaatio -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- Testaukseen liittyvät riippuvuudet  -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.4</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Yksikkätestien sijaisoliota varten -->
+    <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <version>2.3</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Yksinkertainen ajoympäristö -->
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty</artifactId>
+      <version>${jetty.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty-util</artifactId>
+      <version>${jetty.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty-management</artifactId>
+      <version>${jetty.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+
+    <!-- Resurssimäärittelyt Wicket-komponenttien HTML-tiedostoja varten. -->
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.html</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <!-- Resurssimäärittelyt Wicket-komponenttien HTML-tiedostoja varten. -->
+    <testResources>
+      <testResource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.html</include>
+        </includes>
+      </testResource>
+    </testResources>
+
+   
+  </build>
+</project>

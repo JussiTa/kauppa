@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+<head>
+<title>Hotellisovellus - Rekister&ouml;ityminen</title>
+</head>
+<body>
+<wicket:extend>
+      <h1>Sis&auml;&auml;nkirjautuminen</h1>
+      <div class="descr">Kirjaudu sis&auml;&auml;n tai rekister&ouml;idy</div>
+        <p>
+          <span wicket:id="palaute">Mahdolliset palautteet t&auml;h&auml;n.</span>
+        </p>  
+		     <form wicket:id="lomake">
+		     <fieldset>
+		       <legend>Tunnus ja salasana</legend>
+		       <p>
+		         <label for="kayttajatunnus">Kayttaj&auml;tunnus</label> 
+		         <input type="text" id="kayttajatunnus" wicket:id="kayttajatunnus"/>
+		        </p>
+		       <p>
+		         <label for="salasana">Salasana</label> 
+		         <input type="password" id="salasana" wicket:id="salasana"/>
+		        </p>     
+		     </fieldset>
+		     <p class="nappi">
+		      <input type="submit" value="Kirjaudu" />
+		     </p>
+		    </form>
+		
+	    <p><a href="#" wicket:id="rekisteroidy">Rekister&ouml;idy</a></p>
+	    
+	    <p>
+  	    Ohjeet sis&auml;&auml;nkirjautumista ja rekister&ouml;itymist&auml; 
+  	    varten t&auml;h&auml;n. 
+  	    
+	    </p>
+</wicket:extend>
+</body>
+</html>

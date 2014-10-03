@@ -1,0 +1,11 @@
+grant principal ${tp}.WebKayttajaRooli "admin"
+{
+  permission ${ComponentPermission} "${paketti}.WebMaster", "render, enable";
+};
+
+
+grant principal ${tp}.WebKayttajaRooli "asiakas"
+{
+  permission ${ComponentPermission} "${paketti}.OmatSivut", "render, enable";
+};
+

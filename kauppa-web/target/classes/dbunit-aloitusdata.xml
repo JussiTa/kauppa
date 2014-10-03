@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+    <!-- Käyttäjät -->
+  <!-- Salasana mmottoselle on "mm". -->
+  <kayttaja ID="1" VERSIO="0" TUNNUS="mmottonen"
+    SALASANA="uNCbTYWAqsvZ78RUCpuI0v651+U=" ETUNIMI="Malli"
+    SUKUNIMI="Mottonen" PAIKKAKUNTA="Jyvaskyla" POSTINUMERO="40100"
+    KATU = "katu" POSTILOKERO = "12"/>
+    
+    
+
+  
+  <!-- Salasana Eskolle on "esko". -->
+  <kayttaja ID="2" VERSIO="0" TUNNUS="esko"
+    SALASANA="VUz3X7JbUPshDV5yH/hruaZj/Lk=" ETUNIMI="Esko"
+    SUKUNIMI="Virtanen" PAIKKAKUNTA="Jyvaskyla" POSTINUMERO="40100"
+    KATU = "katu" POSTILOKERO = "12"/>
+    
+    	<!-- Salasana adminille on "hk". -->
+  <kayttaja ID="3" VERSIO="0" TUNNUS="admini"
+    SALASANA="T+DSQjG2MJyQp47rjcb/LKLUy4U="
+    ETUNIMI="esimerkki" SUKUNIMI="esimerkki2"  PAIKKAKUNTA="Jyvaskyla" POSTINUMERO="40100"
+    KATU = "katu" POSTILOKERO = "12"/>
+  <admin ID="3" HENKILOTUNNUS="010140-001A"/>
+    
+    
+    
+	
+  
+  
+  
+  
+  
+  
+  
+
+ 
+
+  
+
+ 
+  <lasku ID="1" VERSIO="0" ERAPAIVA="2008-03-30 13:05:28.091"
+    VIITENUMERO="12345678912345678917" />
+  <lasku ID="2" VERSIO="0" ERAPAIVA="2008-03-30 13:07:16.541" />
+  <lasku ID="3" VERSIO="0" ERAPAIVA="2008-03-30 13:07:57.635" />
+
+  <tapahtumarivi ID="1" VERSIO="0"
+    AIKALEIMA="2009-04-28 13:07:16.541" KPL="0"
+    VEROTONSUMMA="3.00" lasku_ID="1" />
+  <tapahtumarivi ID="2" VERSIO="0"
+    AIKALEIMA="2009-04-29 13:07:16.541" KPL="0"
+    VEROTONSUMMA="2.00" lasku_ID="1" />
+  <tapahtumarivi ID="3" VERSIO="0"
+    AIKALEIMA="2009-04-30 13:07:16.541" KPL="0"
+    VEROTONSUMMA="1.00" lasku_ID="1" />
+    -->
+    <!-- Tuotteet --> 
+  <Tuote id="1" tuoteryhma="jääkiekko" nimi="jääkiekkomaila" hinta="49"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="2" tuoteryhma="jääkiekko" nimi="jääkiekko" hinta="1.50"
+    alv="23" kpl="20" versio ="0"/>
+    <Tuote id="3" tuoteryhma="jääkiekko" nimi="luistimet" hinta="150"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="4" tuoteryhma="jääkiekko" nimi="kypärä" hinta="59"
+    alv="23" kpl="5" versio ="0"/>
+    
+    <Tuote id="5" tuoteryhma="pyöräily" nimi="pyöräilykypärä" hinta="45.90"
+    alv="23" kpl="1" versio ="0"/>
+    <Tuote id="6" tuoteryhma="pyöräily" nimi="polkupyörä" hinta="299"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="7" tuoteryhma="kalastus" nimi="virveli avokela" hinta="109"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="8" tuoteryhma="kalastus" nimi="siima" hinta="4.90"
+    alv="23" kpl="3" versio ="0"/>
+    <Tuote id="9" tuoteryhma="sukellus" nimi="märkäpuku" hinta="250"
+    alv="23" kpl="6" versio ="0"/>
+      
+
+</dataset>

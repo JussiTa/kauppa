@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <Tuote id="1" tuoteryhma="jääkiekko" nimi="jääkiekkomaila" hinta="49"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="2" tuoteryhma="jääkiekko" nimi="jääkiekko" hinta="1.50"
+    alv="23" kpl="20" versio ="0"/>
+    <Tuote id="3" tuoteryhma="pyöräily" nimi="pyöräilykypärä" hinta="45.90"
+    alv="23" kpl="1" versio ="0"/>
+    <Tuote id="4" tuoteryhma="pyöräily" nimi="polkupyörä" hinta="299"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="5" tuoteryhma="kalastus" nimi="virveli avokela" hinta="109"
+    alv="23" kpl="5" versio ="0"/>
+    <Tuote id="6" tuoteryhma="kalastus" nimi="siima" hinta="4.90"
+    alv="23" kpl="3" versio ="0"/>
+    <Tuote id="7" tuoteryhma="sukellus" nimi="märkäpuku" hinta="250"
+    alv="23" kpl="6" versio ="0"/>
+    
+  
+</dataset>

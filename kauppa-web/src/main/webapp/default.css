@@ -1,0 +1,264 @@
+/*#############################################################
+Name: Dirtylicious
+Date: 2007-03-10
+Description: A soft-colored, bright and somewhat dirty two-column template.
+Author: Viktor Persson
+URL: http://templates.arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* standard elements */
+html {min-height: 100%;}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #048;}
+a:hover {color: #06C;}
+
+body {
+	background: #E7E7E2 no-repeat center top;
+	color: #444;
+	font: normal 62.5% Tahoma,sans-serif;
+	padding-top: 64px;
+}
+
+p,code,ul {padding-bottom: 1.2em;}
+
+li {list-style: none;}
+
+h1 {font: normal 1.8em Tahoma,sans-serif;}
+h2 {font: bold 1.4em sans-serif;}
+h3 {font: bold 1em Tahoma,sans-serif;}
+
+form,input {margin: 0; padding: 0; display: inline;}
+
+code {
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-left: 6px solid #CCC;
+	color: #666;
+	display: block;
+	font: normal 1em Tahoma,sans-serif;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+blockquote {
+	background: url(img/quote.gif) no-repeat;
+	display: block;
+	font-weight: bold;
+	padding-left: 28px;
+}
+
+h1,h2,h3 {padding-top: 6px; color: #553; margin-bottom: 4px;}
+
+/* misc */
+.clearer {clear: both; font-size: 0;}
+.left {float: left;}
+.right {float: right;}
+
+/* structure */
+.inner-container {
+	border: 2px solid #D7D7D2;
+	background: #FFF;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 10px;
+	width: 780px;
+}
+
+.outer-container {
+	background: no-repeat center bottom;
+	padding-bottom: 64px;
+}
+
+/* headere & title */
+.header {
+	background: #222 url('img/header.jpg') no-repeat;
+	height: 200px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.header .title {
+	color: #FFF;
+	padding-top: 50px;
+}
+.header .title .sitename a {
+	border-bottom: 1px dashed #657382;
+	color: #FFF;
+	font: normal 3em sans-serif;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+.header .title a:hover {border-color: #F60;}
+.header .title .slogan {
+	font: normal 1.1em Verdana,sans-serif;
+	padding-top: 6px;
+}
+
+/* path */
+.path {
+	background: #949490;
+	color: #FFF;
+	font: normal 1.1em Verdana,sans-serif;
+	padding: 8px 12px;
+}
+.path a {
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.path a:hover {
+	color: #FFE;
+	text-decoration: underline;
+}
+
+/* main */
+.main {
+	background: url(img/main.gif) repeat-y;
+	border-top: 4px solid #FFF;
+	padding: 8px 12px 0 0;
+}
+
+/* content */
+.content {
+	float: right;
+	width: 538px;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+.content li {
+	list-style: url(img/li.gif);
+	margin-left: 18px;
+}
+.content p {font-family: "Lucida Sans Unicode",sans-serif;}
+
+.content table {
+  border: 0;
+}
+
+/* navigation */
+.navigation {
+	float: left;
+	width: 210px;
+}
+.navigation h2 {
+	color: #2A2A23;
+	font: bold 1.1em Tahoma,sans-serif;
+	line-height: 30px;
+	margin: 0;
+	padding-left: 7px;
+}
+.navigation ul {
+	padding: 0;
+	border-top: 1px solid #EAEADA;
+}
+.navigation li {border-bottom: 1px solid #EAEADA;}
+.navigation li a {
+	font-size: 1.1em;
+	color: #554;
+	display: block;
+	padding: 8px 0 8px 5%;
+	text-decoration: none;
+	width: 95%;
+}
+.navigation li a:hover {
+	background: #F0F0EB;
+	color: #654;	
+}
+
+.tarkealinkki {
+  background: #FAFAEB;
+}
+
+/* footer */
+.footer {
+	background: #949490;
+	color: #F7F7F2;
+  font: 0.75em Tahoma,sans-serif;
+	margin-top: 5px;
+	padding: 10px 12px;
+}
+.footer a {
+	color: #F7F7F2;
+	text-decoration: none;
+}
+.footer a:hover {color: #FFC;}
+
+/* taulukot */
+.content th {
+  color: white;
+  background: #949490;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  padding: 5px 5px 5px 5px;
+  border: 1px;
+  border-color: #949490;
+  border-style: solid;
+  letter-spacing: 1px;
+}
+
+.content td {
+  background: #F0F0EB;
+  padding: 5px 5px 5px 5px;
+  color: #554;
+}
+
+/* lomakkeet */
+.content label {
+  width: 8em;
+  margin-right: 2em;
+  display: block;
+  float: left;
+  text-align: right;
+}
+
+.content fieldset {
+	padding: 1em;
+}
+
+.content .nappi input {
+	float: right;
+	background: #554;
+	color: white;
+	margin: 0.5em;
+	
+}
+
+.content li .feedbackPanelWARNING {
+  color: red;
+  font-size: medium;
+  font-weight: bold;
+}
+
+div.wicket-aa {
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
+  text-align:left;
+  background-color: #F0F0EB; 
+  color: black;
+}
+
+div.wicket-aa ul { 
+	list-style:none; 
+	padding: 2px; 
+	margin:0; 
+	font-size: 1.2em;
+}
+
+div.wicket-aa ul li.selected { 
+  background: #554;
+  color: white;
+	padding: 2px; 
+	margin:0; 
+}
